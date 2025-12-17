@@ -1478,7 +1478,7 @@ local function LoadAndUpdateAnimations()
     -- Fetch online animations
     local function fetchOnlineAnimations()
         local success, result = pcall(function()
-            return game:HttpGet("https://raw.githubusercontent.com/Gazer-Ha/Gaze-stuff/refs/heads/main/Gaze%20Anim%20Database")
+            return game:HttpGet("https://raw.githubusercontent.com/Japettt/NETNET/refs/heads/main/Japet Database")
         end)
         
         if success and result then
