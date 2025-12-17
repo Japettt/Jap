@@ -770,7 +770,7 @@ animIdTextBox2.Position = UDim2.new(0.05, 0, 0.66, 0)
 animIdTextBox2.Visible = true
 animIdTextBox2.Parent = addContent
 
-local animationTypes = {"Idle", "Walk", "Run", "Jump", "Fall", "Swim", "SwimIdle", "Climb"}
+local animationTypes = {"Idle", "Walk", "Takbo", "Jump", "Fall", "Swim", "SwimIdle", "Climb"}
 local currentTypeIndex = 1
 
 
@@ -825,7 +825,7 @@ local function FIVEHUNDREDCIGARETTES(filter)
     end
     removeButtons = {}
     local yPos = 0
-    local typeOrder = {"Idle", "Walk", "Run", "Jump", "Fall", "Swim", "SwimIdle", "Climb"}
+    local typeOrder = {"Idle", "Walk", "Takbo", "Jump", "Fall", "Swim", "SwimIdle", "Climb"}
 
 for _, animType in ipairs(typeOrder) do
     local anims = Animations[animType]
@@ -905,11 +905,7 @@ removeSearchBox:GetPropertyChangedSignal("Text"):Connect(function()
     FIVEHUNDREDCIGARETTES(removeSearchBox.Text)
 end)
 
-
-local function REFREHSTHEMAINBUTTONS()
-    for _, btn in ipairs(buttons) do
-        if btn and btn.Parent then btn:Destroy() end
-    end
+        
     buttons = {}
     createdSet = {}
 
