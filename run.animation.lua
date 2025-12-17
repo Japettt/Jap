@@ -1,4 +1,5 @@
 
+
 pcall(function()
 
 if not game.Players.LocalPlayer.Character or game.Players.LocalPlayer.Character:WaitForChild("Humanoid").RigType ~= Enum.HumanoidRigType.R15 then 
@@ -405,7 +406,7 @@ OriginalAnimations = {
         ["[UGC] Flipping"] = "124427738251511",
         ["Sneaky"] = "1132494274",
         ["R6"] = "12518152696",
-        ["[VOTE] Aura"] = "120142877225965",
+        ["Aura"] = "120142877225965",
         ["Popstar"] = "1212980348",
         ["[UGC] reset"] = "0",
         ["Wicked (Popular)"] = "72301599441680",
@@ -626,7 +627,7 @@ OriginalAnimations = {
         ["CowBoy"] = "1014380606",
         ["No Boundaries (Walmart)"] = "18747060903",
         ["Mage"] = "707826056",
-        ["[VOTE] sticky"] = "77520617871799",
+        ["sticky"] = "77520617871799",
         ["Reanimated R15"] = "4211214992",
         ["Popstar"] = "1213044953",
         ["(UGC) Retro"] = "121075390792786",
@@ -770,7 +771,7 @@ animIdTextBox2.Position = UDim2.new(0.05, 0, 0.66, 0)
 animIdTextBox2.Visible = true
 animIdTextBox2.Parent = addContent
 
-local animationTypes = {"Idle", "Walk", "Takbo", "Jump", "Fall", "Swim", "SwimIdle", "Climb"}
+local animationTypes = {"Idle", "Walk", "Run", "Jump", "Fall", "Swim", "SwimIdle", "Climb"}
 local currentTypeIndex = 1
 
 
@@ -825,7 +826,7 @@ local function FIVEHUNDREDCIGARETTES(filter)
     end
     removeButtons = {}
     local yPos = 0
-    local typeOrder = {"Idle", "Walk", "Takbo", "Jump", "Fall", "Swim", "SwimIdle", "Climb"}
+    local typeOrder = {"Idle", "Walk", "Run", "Jump", "Fall", "Swim", "SwimIdle", "Climb"}
 
 for _, animType in ipairs(typeOrder) do
     local anims = Animations[animType]
@@ -905,7 +906,11 @@ removeSearchBox:GetPropertyChangedSignal("Text"):Connect(function()
     FIVEHUNDREDCIGARETTES(removeSearchBox.Text)
 end)
 
-        
+
+local function REFREHSTHEMAINBUTTONS()
+    for _, btn in ipairs(buttons) do
+        if btn and btn.Parent then btn:Destroy() end
+    end
     buttons = {}
     createdSet = {}
 
@@ -1573,5 +1578,5 @@ LoadAndUpdateAnimations()
 Notify("PLEASE", "Donate me, im poor :(", 1)
 local lt = os.clock() - st
 Notify("loaded", string.format("in %.2f seconds.", lt), 5)
-Notify("small Anim Update", "Ah yes. fresh anims and RTHRO", 20)
+Notify("small Anim Update", "Ah yes. ASIM SI NETNET", 20)
 end)
